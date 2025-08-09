@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Serolyn Notes</title>
+  <meta name="description" content="Notes locales, offline, installable.">
+  <meta name="theme-color" content="#0f0f12">
+  <!-- iOS install-ish hints -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Serolyn Notes</h1>
+    <button id="exportBtn" aria-label="Exporter">Exporter</button>
+    <label id="importLabel" for="importFile" role="button" aria-label="Importer">Importer</label>
+    <input id="importFile" type="file" accept="application/json" hidden>
+  </header>
+
+  <main>
+    <form id="noteForm" autocomplete="off">
+      <input id="title" placeholder="Titre" required>
+      <textarea id="content" placeholder="Ta note..." rows="3" required></textarea>
+      <button type="submit">Ajouter</button>
+    </form>
+
+    <section id="notes" aria-live="polite"></section>
+
+    <p class="hint">
+      Astuce: installe sur iPhone via Safari → Partager → « Ajouter à l’écran d’accueil ». Hors-ligne OK.
+    </p>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js').catch(console.error);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+*{box-sizing:border-box}html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#0f0f12;color:#e6e6ea}
+header{position:sticky;top:0;display:flex;gap:.5rem;align-items:center;justify-content:space-between;padding:1rem;border-bottom:1px solid #222;background:rgba(15,15,18,.8);backdrop-filter:saturate(140%) blur(6px)}
+h1{font-size:1.1rem;margin:0;font-weight:700;letter-spacing:.5px}
+header button,#importLabel{appearance:none;border:1px solid #2a2a2f;background:#151519;color:#e6e6ea;border-radius:.6rem;padding:.5rem .75rem;font-weight:600;cursor:pointer}
+header button:hover,#importLabel:hover{background:#1a1a22}
+main{max-width:720px;margin:0 auto;padding:1rem}
+form{display:grid;gap:.5rem;margin:.75rem 0 1.25rem}
+input,textarea{width:100%;border:1px solid #2a2a2f;background:#141419;color:#eee;border-radius:.6rem;padding:.75rem}
+button[type=submit]{border:none;background:#4a72ff;color:white;border-radius:.7rem;padding:.8rem 1rem;font-weight:700;cursor:pointer}
+button[type=submit]:hover{filter:brightness(1.05)}
+.card{border:1px solid #24242a;background:#16161c;border-radius:.9rem;padding:.85rem;margin:.6rem 0}
+.card h3{margin:.1rem 0 .35rem;font-size:1rem}
+.card p{white-space:pre-wrap;opacity:.95;margin:.35rem 0}
+.row{display:flex;gap:.5rem;align-items:center;justify-content:flex-end;margin-top:.35rem}
+.row button{appearance:none;border:1px solid #2a2a2f;background:#141419;color:#e6e6ea;border-radius:.5rem;padding:.4rem .6rem;cursor:pointer}
+.row button:hover{background:#191922}
+.hint{opacity:.7;font-size:.9rem;margin-top:1rem}
+.empty{opacity:.5;text-align:center;padding:1.25rem;border:1px dashed #292933;border-radius:.9rem}
